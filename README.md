@@ -1,43 +1,29 @@
-## Review
+# Superdev.Editorconfig
+[![Version](https://img.shields.io/nuget/v/Superdev.Editorconfig.svg)](https://www.nuget.org/packages/Superdev.Editorconfig)  [![Downloads](https://img.shields.io/nuget/dt/Superdev.Editorconfig.svg)](https://www.nuget.org/packages/Superdev.Editorconfig)
 
-To analyze the style and quality of .NET code, analyzers are used that are configured using the _**.editorconfig**_ file
-<br />see [Code analysis in .NET](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview)
-<br />see [EditorConfig](https://editorconfig.org/)
-<br />see [Configuration files for code analysis rules - .NET](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/configuration-files)
+### Why _.editorconfig_?
+EditorConfig helps maintain consistent coding styles for multiple developers working on the same project across various editors and IDEs. The EditorConfig project consists of a file format for defining coding styles and a collection of text editor plugins that enable editors to read the file format and adhere to defined styles. EditorConfig files are easily readable and they work nicely with version control systems.
 
-### There are several analyzer packages
+### Download and Install Superdev.Editorconfig
+This library is available on NuGet: https://www.nuget.org/packages/Superdev.Editorconfig
+Use the following command to install Superdev.Editorconfig using NuGet package manager console:
 
-[NetAnalyzers](https://docs.microsoft.com/en-us/visualstudio/code-quality/roslyn-analyzers-overview?view=vs-2022), [StyleCop](https://www.nuget.org/packages/StyleCop.Analyzers/), [Roslynator](https://www.nuget.org/packages/Roslynator.Analyzers/), [XUnit Analyzers](https://www.nuget.org/packages/xunit.analyzers/), and [Sonar Analyzer](https://www.nuget.org/packages/SonarAnalyzer.CSharp/).
+    PM> Install-Package Superdev.Editorconfig
 
-### Current _.editorconfig_
+You can use this library in any .NET project which is compatible to .NET Standard 1.6 and higher.
 
-Current _**.editorconfig**_ file configures two analyzer packages:
-<br />Microsoft.CodeAnalysis.CSharp.CodeStyle - [Code-style rules overview - .NET](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/)
-<br />StyleCop.Analyzers - [StyleCopAnalyzers Status](https://dotnetanalyzers.github.io/StyleCopAnalyzers)
+### What rules are contained in _.editorconfig_?
+The provided _**.editorconfig**_ file defines hand-picked, consistent rules covered by [.NET code-style analysis](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/).
 
-## How to include _.editorconfig_
+### How to use _.editorconfig_?
+If your project targets .NET 5 or later, code analysis is enabled by default.
+If your project targets a different .NET implementation, for example, .NET Core, .NET Standard, or .NET Framework, you must manually enable code analysis by setting the EnableNETAnalyzers property to true.
 
-You will need to install the appropriate version of the _Superdev.Editorconfig_ nuget package into your project and all the following magic should appear by itself after the first build.
-<hr />
-The _**.editorconfig**_ file must be placed at the root of the solution/project.
-<br />Microsoft.CodeAnalysis.CSharp.CodeStyle - will work automatically in popular IDEs (Visual Studio, Visual Studio Code, Rider (partial))
-<br />StyleCop.Analyzers - for this package to work, you need to include the NuGet package [StyleCop.Analyzers](https://www.nuget.org/packages/StyleCop.Analyzers/) in solution
+### Contribution
+Contributors welcome! If you have an addition or you find an inconsistency in the editorconfig file, feel free to create a new issue on github.com.
 
-The _**.editorconfig**_ supported by Visual Studio, Visual Studio Code, Rider (partially) and other IDEs (if it supports .editorconfig settings)
-<br /><span style="color:green">Note:</span> IDEs may introduce their own additional rules, but .editorconfig has the highest priority.
-<br /><span style="color:red">Attention:</span> _**.editorconfig**_  will only work at the IDE level. See below for how the analyzers work during build.
-
-## Running analyzes at build time
-
-* The ._**editorconfig**_ file must be placed at the root of the solution/project.
-* Add NuGet packages to your projects:
-  <br />[Microsoft.CodeAnalysis.CSharp.CodeStyle](https://www.nuget.org/packages/Microsoft.CodeAnalysis.CSharp.CodeStyle/)
-  <br />[StyleCop.Analyzers](https://www.nuget.org/packages/StyleCop.Analyzers/)
-
-* After that, the projects will be built taking into account the analyzers and issue errors and warnings according to the analyzers settings.
-
-## Run in CI/CD
-
-If NuGet packages are included in the project, the analyzers described above will be launched when the project is built
-<br /><span style="color:green">Note:</span> if the NuGet packages described above are not included in the project being built, they can be installed during the build, and then the build will be carried out with the analyzers. This way we can force the analyzers to run and issue build errors.
-
+### Links
+- [Code analysis in .NET](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview)
+- [EditorConfig](https://editorconfig.org/)
+- [Configuration files for code analysis rules - .NET](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/configuration-files)
+- [Roslyn Analyzers](https://docs.microsoft.com/en-us/visualstudio/code-quality/roslyn-analyzers-overview?view=vs-2022), [StyleCop](https://www.nuget.org/packages/StyleCop.Analyzers/), [Roslynator](https://www.nuget.org/packages/Roslynator.Analyzers/), [XUnit Analyzers](https://www.nuget.org/packages/xunit.analyzers/), [Sonar Analyzer](https://www.nuget.org/packages/SonarAnalyzer.CSharp/).

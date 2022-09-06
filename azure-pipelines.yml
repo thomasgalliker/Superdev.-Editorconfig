@@ -67,6 +67,13 @@ steps:
     LogLevel: 'verbose'
     FailOnWarning: false
     DisableTelemetry: false'
+    
+- task: Bash@3
+  displayName: 'Update .editorconfig'
+  inputs:
+    targetType: 'inline'
+    script: |
+      sed -i 's|{Version}|$(Build.BuildNumber)|g' .editorconfig
 
 - task: NuGetToolInstaller@0
   displayName: 'Use NuGet 6.x'
