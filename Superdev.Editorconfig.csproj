@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netstandard1.6;netstandard2.0;netstandard2.1;net5.0;net6.0;</TargetFrameworks>
+		<Product>Superdev.Editorconfig</Product>
+		<Description>Editorconfig template for C# projects.</Description>
+		<RepositoryUrl>https://github.com/thomasgalliker/Superdev.Editorconfig</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>editorconfig, analyzer</PackageTags>
+		<IsPackable>true</IsPackable>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<IncludeSource>true</IncludeSource>
+		<NoDefaultExcludes>true</NoDefaultExcludes>
+		<LangVersion>latest</LangVersion>
+		<Nullable>enable</Nullable>
+		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="Superdev.Editorconfig.props" Pack="true" PackagePath="\build" />
+		<Content Include=".editorconfig" Pack="true" PackagePath="\content\Rules"></Content>
+	</ItemGroup>
+
+</Project>
