@@ -1,12 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>netstandard1.6;netstandard2.0;netstandard2.1;net5.0;net6.0;</TargetFrameworks>
-		<Product>Superdev.Editorconfig</Product>
+		<AssemblyTitle>Superdev.Editorconfig</AssemblyTitle>
 		<Description>Editorconfig template for C# projects.</Description>
-		<RepositoryUrl>https://github.com/thomasgalliker/Superdev.Editorconfig</RepositoryUrl>
+		<VersionPrefix>1.0.0</VersionPrefix>
+		<Version>1.0.0</Version>
+		<Authors>Thomas Galliker</Authors>
+		<TargetFrameworks>netstandard1.6;netstandard2.0;netstandard2.1;net5.0;net6.0;</TargetFrameworks>
+		<AssemblyName>Superdev.Editorconfig</AssemblyName>
+		<PackageId>Superdev.Editorconfig</PackageId>
+		<PackageTags>editorconfig;codestyle</PackageTags>
+		<PackageIconUrl>https://raw.githubusercontent.com/thomasgalliker/Superdev.Editorconfig/develop/Images/logo.png</PackageIconUrl>
+		<PackageProjectUrl>https://github.com/thomasgalliker/Superdev.Editorconfig</PackageProjectUrl>
+		<PackageLicenseUrl>http://opensource.org/licenses/Apache-2.0</PackageLicenseUrl>
 		<RepositoryType>git</RepositoryType>
-		<PackageTags>editorconfig, analyzer</PackageTags>
+		<RepositoryUrl>https://github.com/thomasgalliker/Superdev.Editorconfig</RepositoryUrl>
+		<SignAssembly>True</SignAssembly>
 		<IsPackable>true</IsPackable>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
@@ -14,12 +23,34 @@
 		<NoDefaultExcludes>true</NoDefaultExcludes>
 		<LangVersion>latest</LangVersion>
 		<Nullable>enable</Nullable>
-		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
 	</PropertyGroup>
 
+	<PropertyGroup>
+		<ApplicationIcon />
+		<OutputType>Library</OutputType>
+		<StartupObject />
+		<Company>superdev GmbH</Company>
+		<Product>Superdev.Editorconfig</Product>
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+		<RootNamespace>Superdev.Editorconfig</RootNamespace>
+		<PackageReleaseNotes>
+			1.0.0
+			- Initial release
+		</PackageReleaseNotes>
+		<Copyright>Copyright 2022</Copyright>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+	
 	<ItemGroup>
 		<None Include="Superdev.Editorconfig.props" Pack="true" PackagePath="\build" />
 		<Content Include=".editorconfig" Pack="true" PackagePath="\content\Rules"></Content>
 	</ItemGroup>
-
+	
 </Project>
