@@ -1,0 +1,1 @@
+﻿dotnet pack Superdev.EditorConfig.csproj -c Release -o Samples\Packages --no-restore
