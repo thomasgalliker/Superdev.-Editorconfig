@@ -5,6 +5,10 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Superdev.Editorconfig", "Superdev.Editorconfig.csproj", "{29C64914-FD0F-4B50-AE31-25769F6E364D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{CF03770B-AE43-4AC4-A646-42C117DF7BD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "Samples\ConsoleApp\ConsoleApp.csproj", "{CF43BB8A-7145-4EDB-8228-EF1742DD2CB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{29C64914-FD0F-4B50-AE31-25769F6E364D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29C64914-FD0F-4B50-AE31-25769F6E364D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29C64914-FD0F-4B50-AE31-25769F6E364D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF43BB8A-7145-4EDB-8228-EF1742DD2CB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF43BB8A-7145-4EDB-8228-EF1742DD2CB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF43BB8A-7145-4EDB-8228-EF1742DD2CB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF43BB8A-7145-4EDB-8228-EF1742DD2CB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CF43BB8A-7145-4EDB-8228-EF1742DD2CB7} = {CF03770B-AE43-4AC4-A646-42C117DF7BD5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6FB6D925-18B5-4BEB-A0C6-25715B784239}
